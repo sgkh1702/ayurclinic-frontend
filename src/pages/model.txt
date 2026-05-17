@@ -1,0 +1,35 @@
+I thought a lot and I think we are going in the wrong direction, we are mixing patient data and case paper. ideally patient master should be separate, on first screen it should ask for old patient or new patient, if he is a new patient create patient form to be displayed for creating new patent, if he is a old patient there should be search on name, mobile and email, based on this criteria short listed patients to be displayed and on selection, their should be option to edit view and create new case paper, in view patient master and his earlier visits can be displayed, on clicking of any case paper, case paper should be displayed with attachments,  all the attachments should be link to patient ID and date, what do you think
+
+Microsoft Indic Input Tool.
+
+Ayurclinic finalised direction
+
+Patient master will be separate from case papers.
+
+New case paper will be created by selecting an existing patient using patient_id.
+
+Patient details for print will be picked from patient master automatically.
+
+Case paper will contain visit-specific data only.
+
+We will keep 4 boxes in the case paper:
+
+Symptoms / complaints
+
+Previous treatment / findings
+
+Notes / advice
+
+Prescription
+
+Speech-to-text will be added to the note boxes.
+
+Attachments like reports/X-rays/PDFs will be linked to the visit/case paper.
+
+Screen layout will be compact:
+
+left side = patient master panel
+
+right side = 4 smaller scrollable boxes
+
+Print layout will combine patient master + case paper content and keep the output clean and compact.

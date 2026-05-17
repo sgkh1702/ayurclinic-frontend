@@ -1,0 +1,296 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Full-page Ayurved background */
+.patients-page {
+  min-height: 100vh;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f4f3ec; /* warm paper tone */
+  background-image: url("https://pplx-res.cloudinary.com/image/upload/pplx_search_images/551c123dc03d1d570a268f6b0b1ba88a5394e645.jpg");
+  background-size: 260px 260px;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+/* Inner wrapper to keep layout narrower so background is visible */
+.patients-page-inner {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Centered card with existing layout inside */
+.patients-layout {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 14px;
+  border: 1px solid #e2dccb;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 16px;
+  padding: 16px;
+}
+
+/* Panels */
+.patients-sidebar,
+.patients-main {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Titles */
+.panel-title {
+  margin: 0 0 14px;
+  font-size: 22px;
+  color: #1f2937;
+}
+
+.card-title {
+  margin: 0 0 12px;
+  font-size: 18px;
+  color: #1f2937;
+}
+
+/* Cards */
+.patient-form-card,
+.visit-form-card,
+.patient-master-card,
+.history-card {
+  border: 1px solid #e3e8ee;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 16px;
+  background: #fff;
+}
+
+/* Inputs */
+.patient-form-card input,
+.patient-form-card textarea,
+.visit-form-card input,
+.visit-form-card textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 11px 12px;
+  border: 1px solid #cfd7df;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+}
+
+.patient-form-card input:focus,
+.patient-form-card textarea:focus,
+.visit-form-card input:focus,
+.visit-form-card textarea:focus {
+  border-color: #198754;
+}
+
+/* Two-column grids inside forms */
+.two-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* Buttons */
+.patient-form-card button,
+.visit-form-card button,
+.new-visit-btn,
+.history-item {
+  font-family: inherit;
+}
+
+.patient-form-card button,
+.visit-form-card button,
+.new-visit-btn {
+  background: #198754;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.patient-form-card button:disabled,
+.visit-form-card button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.secondary-btn {
+  background: #6c757d !important;
+}
+
+/* Patient list */
+.patient-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.patient-list-item {
+  width: 100%;
+  text-align: left;
+  border: 1px solid #dde4ea;
+  background: #f9fbfc;
+  border-radius: 10px;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.patient-list-item strong {
+  font-size: 15px;
+  color: #1f2937;
+}
+
+.patient-list-item span {
+  color: #667085;
+  font-size: 13px;
+}
+
+.patient-list-item.active {
+  border-color: #198754;
+  background: #edf9f1;
+}
+
+/* Messages and placeholders */
+.page-message,
+.inline-message {
+  margin: 10px 0;
+  color: #198754;
+  font-weight: 600;
+}
+
+.placeholder-card {
+  border: 1px dashed #cbd5df;
+  border-radius: 10px;
+  padding: 18px;
+  background: #fafcfd;
+  color: #667085;
+}
+
+/* Patient master area */
+.patient-master-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.patient-name {
+  margin: 0 0 10px;
+  font-size: 24px;
+  color: #111827;
+}
+
+.patient-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.patient-address {
+  margin-top: 8px;
+  color: #374151;
+}
+
+/* Visit history list */
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.history-item {
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  background: #fbfcfd;
+  border-radius: 10px;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  color: #111827;
+}
+
+.history-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 120px;
+  text-align: left;
+}
+
+.history-left span {
+  font-size: 13px;
+  color: #667085;
+}
+
+.history-preview {
+  color: #4b5563;
+  font-size: 14px;
+  text-align: left;
+  flex: 1;
+}
+
+/* Visit form header */
+.visit-form-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.visit-subtitle {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.visit-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .patients-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .patient-master-top,
+  .visit-form-header,
+  .history-item {
+    flex-direction: column;
+  }
+
+  .patient-meta-grid,
+  .two-col-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .new-visit-btn,
+  .patient-form-card button,
+  .visit-form-card button {
+    width: 100%;
+  }
+}
